@@ -1,0 +1,3581 @@
+// I ADD OVER 3500 LINES OF SCRIPT TO BALDUR.BCS. THIS CLEARLY MAKES ME COOL.
+
+//////////////////////////////////////////////////////////////////////
+// HAS TO BE AT TOP -  RESET VIRTUE DISPLAY AFTER LOADING
+
+IF
+	OnCreation()
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@14)
+		Continue()
+END
+
+IF
+	OnCreation()
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@15)
+		Continue()
+END
+
+IF
+	OnCreation()
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",7)
+	GlobalLT("D0VIRTUE","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	OnCreation()
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",12)
+	GlobalLT("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+		Continue()
+END
+
+IF
+	OnCreation()
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@18)
+		Continue()
+END
+
+//////////////////////////////////////////////////////////////////////
+// NPC HAPPINESS
+
+IF
+	Global("D0Change","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",1))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",1))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",1))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",1))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",1))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",2)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",2))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",2))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",2))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",2))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",2))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",3)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",3))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",3))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",3))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",3))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",3))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",4)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",4))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",4))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",4))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",4))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",4))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",5)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",5))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",5))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",5))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",5))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",5))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",6)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",6))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",6))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",6))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",6))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",6))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",7)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",7))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",7))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",7))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",7))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",7))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",8)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",8))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",8))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",8))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",8))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",8))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",9)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",9))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",9))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",9))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",9))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",9))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",10)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",10))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",10))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",10))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",10))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",10))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",11)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",11))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",11))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",11))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",11))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",11))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",12)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",12))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",12))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",12))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",12))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",12))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",13)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",13))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",13))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",13))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",13))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",13))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",14)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",14))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",14))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",14))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",14))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",14))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",15)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",15))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",15))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",15))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",15))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",15))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",16)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",16))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",16))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",16))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",16))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",16))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",17)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",17))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",17))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",17))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",17))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",17))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",18)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",18))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",18))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",18))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",18))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",18))
+		Continue()
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",18)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",19))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",19))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",19))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",19))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",19))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-1)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-1))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-1))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-1))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-1))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-1))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-2)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-2))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-2))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-2))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-2))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-2))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-3)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-3))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-3))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-3))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-3))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-3))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-4)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-4))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-4))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-4))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-4))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-4))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-5)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-5))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-5))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-5))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-5))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-5))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-6)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-6))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-6))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-6))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-6))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-6))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-7)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-7))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-7))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-7))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-7))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-7))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-8)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-8))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-8))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-8))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-8))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-8))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-9)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-9))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-9))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-9))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-9))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-9))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-10)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-10))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-10))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-10))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-10))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-10))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-11)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-11))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-11))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-11))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-11))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-11))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-12)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-12))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-12))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-12))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-12))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-12))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-13)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-13))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-13))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-13))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-13))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-13))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-14)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-14))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-14))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-14))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-14))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-14))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-15)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-15))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-15))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-15))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-15))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-15))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-16)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-16))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-16))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-16))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-16))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-16))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-17)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-17))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-17))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-17))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-17))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-17))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-18)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-18))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-18))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-18))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-18))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-18))
+		Continue()
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-18)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,IncrementGlobal("D0Happiness","LOCALS",-19))
+		ActionOverride(Player3,IncrementGlobal("D0Happiness","LOCALS",-19))
+		ActionOverride(Player4,IncrementGlobal("D0Happiness","LOCALS",-19))
+		ActionOverride(Player5,IncrementGlobal("D0Happiness","LOCALS",-19))
+		ActionOverride(Player6,IncrementGlobal("D0Happiness","LOCALS",-19))
+		Continue()
+END
+
+IF
+	Global("D0Change","GLOBAL",-1)
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VMIRROR","GLOBAL",0)
+	Class(Player1,PALADIN_ALL)
+	!FallenPaladin(Player1)
+	!Global("D0VirtueDisable","GLOBAL",1)
+	GlobalLT("D0Strikes","GLOBAL",2)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0Strikes","GLOBAL",1)
+		Continue()
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-1)
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VMIRROR","GLOBAL",0)
+	Class(Player1,PALADIN_ALL)
+	!FallenPaladin(Player1)
+	!Global("D0VirtueDisable","GLOBAL",1)
+	GlobalLT("D0Strikes","GLOBAL",2)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0Strikes","GLOBAL",2)
+		Continue()
+END
+
+//////////////////////////////////////////////////////////////////////
+// DISPLAYING VIRTUE CHANGES
+
+IF
+	GlobalGT("D0Change","GLOBAL",0)
+	GlobalGT("D0VIRTUE","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",0)
+	GlobalLT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",0)
+	Global("D0VIRTUE","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@301)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",1)
+	Global("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@302)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",2)
+	Global("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@303)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",3)
+	Global("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@304)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",4)
+	Global("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",5)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@305)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",5)
+	Global("D0VIRTUE","GLOBAL",14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",6)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@306)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",6)
+	Global("D0VIRTUE","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",7)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@307)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",7)
+	Global("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",8)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@308)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",8)
+	Global("D0VIRTUE","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",9)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@309)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",9)
+	Global("D0VIRTUE","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",10)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@310)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",10)
+	Global("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",11)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@311)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",11)
+	Global("D0VIRTUE","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",12)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@312)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",12)
+	Global("D0VIRTUE","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",13)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@313)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",13)
+	Global("D0VIRTUE","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",14)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@314)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",14)
+	Global("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",15)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@315)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",15)
+	Global("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",16)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@316)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",16)
+	Global("D0VIRTUE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",17)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@317)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",17)
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",18)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@318)
+END
+
+IF
+	GlobalGT("D0Change","GLOBAL",18)
+	Global("D0VIRTUE","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",19)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@319)
+END
+
+IF
+	Global("D0Change","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@301)
+END
+
+IF
+	Global("D0Change","GLOBAL",2)
+	GlobalLT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@302)
+END
+
+IF
+	Global("D0Change","GLOBAL",3)
+	GlobalLT("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@303)
+END
+
+IF
+	Global("D0Change","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@304)
+END
+
+IF
+	Global("D0Change","GLOBAL",5)
+	GlobalLT("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",5)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@305)
+END
+
+IF
+	Global("D0Change","GLOBAL",6)
+	GlobalLT("D0VIRTUE","GLOBAL",14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",6)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@306)
+END
+
+IF
+	Global("D0Change","GLOBAL",7)
+	GlobalLT("D0VIRTUE","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",7)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@307)
+END
+
+IF
+	Global("D0Change","GLOBAL",8)
+	GlobalLT("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",8)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@308)
+END
+
+IF
+	Global("D0Change","GLOBAL",9)
+	GlobalLT("D0VIRTUE","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",9)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@309)
+END
+
+IF
+	Global("D0Change","GLOBAL",10)
+	GlobalLT("D0VIRTUE","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",10)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@310)
+END
+
+IF
+	Global("D0Change","GLOBAL",11)
+	GlobalLT("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",11)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@311)
+END
+
+IF
+	Global("D0Change","GLOBAL",12)
+	GlobalLT("D0VIRTUE","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",12)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@312)
+END
+
+IF
+	Global("D0Change","GLOBAL",13)
+	GlobalLT("D0VIRTUE","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",13)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@313)
+END
+
+IF
+	Global("D0Change","GLOBAL",14)
+	GlobalLT("D0VIRTUE","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",14)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@314)
+END
+
+IF
+	Global("D0Change","GLOBAL",15)
+	GlobalLT("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",15)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@315)
+END
+
+IF
+	Global("D0Change","GLOBAL",16)
+	GlobalLT("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",16)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@316)
+END
+
+IF
+	Global("D0Change","GLOBAL",17)
+	GlobalLT("D0VIRTUE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",17)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@317)
+END
+
+IF
+	Global("D0Change","GLOBAL",18)
+	GlobalLT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",18)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@318)
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",0)
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@201)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-1)
+	Global("D0VIRTUE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@202)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-2)
+	Global("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@203)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-3)
+	Global("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@204)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-4)
+	Global("D0VIRTUE","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-5)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@205)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-5)
+	Global("D0VIRTUE","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-6)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@206)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-6)
+	Global("D0VIRTUE","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-7)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@207)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-7)
+	Global("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-8)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@208)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-8)
+	Global("D0VIRTUE","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-9)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@209)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-9)
+	Global("D0VIRTUE","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-10)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@210)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-10)
+	Global("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-11)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@211)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-11)
+	Global("D0VIRTUE","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-12)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@212)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-12)
+	Global("D0VIRTUE","GLOBAL",14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-13)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@213)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-13)
+	Global("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-14)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@214)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-14)
+	Global("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-15)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@215)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-15)
+	Global("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-16)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@216)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-16)
+	Global("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-17)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@217)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-17)
+	Global("D0VIRTUE","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-18)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@218)
+		PlaySound("REPDOWN")
+END
+
+IF
+	GlobalLT("D0Change","GLOBAL",-18)
+	Global("D0VIRTUE","GLOBAL",20)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-19)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@219)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-1)
+	GlobalGT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@201)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-2)
+	GlobalGT("D0VIRTUE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@202)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-3)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@203)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-4)
+	GlobalGT("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@204)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-5)
+	GlobalGT("D0VIRTUE","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-5)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@205)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-6)
+	GlobalGT("D0VIRTUE","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-6)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@206)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-7)
+	GlobalGT("D0VIRTUE","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-7)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@207)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-8)
+	GlobalGT("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-8)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@208)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-9)
+	GlobalGT("D0VIRTUE","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-9)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@209)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-10)
+	GlobalGT("D0VIRTUE","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-10)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@210)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-11)
+	GlobalGT("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-11)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@211)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-12)
+	GlobalGT("D0VIRTUE","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-12)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@212)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-13)
+	GlobalGT("D0VIRTUE","GLOBAL",14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-13)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@213)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-14)
+	GlobalGT("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-14)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@214)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-15)
+	GlobalGT("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-15)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@215)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-16)
+	GlobalGT("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-16)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@216)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-17)
+	GlobalGT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-17)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@217)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("D0Change","GLOBAL",-18)
+	GlobalGT("D0VIRTUE","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Change","GLOBAL",0)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-18)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@218)
+		PlaySound("REPDOWN")
+END
+
+//////////////////////////////////////////////////////////////////////
+// VIRTUE HANDLING
+
+IF
+	GlobalLT("D0VIRTUE","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VIRTUE","GLOBAL",1)
+		SetGlobal("D0VMIRROR","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+END
+
+IF
+	GlobalGT("D0VIRTUE","GLOBAL",20)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VIRTUE","GLOBAL",20)
+		SetGlobal("D0VMIRROR","GLOBAL",20)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+END
+
+IF
+	Kit(Player1,0x4015)
+	!Alignment(Player1,MASK_GOOD)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("Stripped","GLOBAL",3)
+		ActionOverride(Player1,AddKit(0))
+		DisplayString(Player1,@19)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Kit(Player1,0x4014)
+	!Alignment(Player1,NEUTRAL)
+	!Alignment(Player1,LAWFUL_NEUTRAL)
+	!Alignment(Player1,LAWFUL_GOOD)
+	!Alignment(Player1,LAWFUL_EVIL)
+    !Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("Stripped","GLOBAL",2)
+		ActionOverride(Player1,AddKit(0))
+		DisplayString(Player1,@20)
+		PlaySound("REPDOWN")
+END
+
+
+IF
+	Kit(Player1,0x4013)
+	!Alignment(Player1,CHAOTIC_EVIL)
+	!Alignment(Player1,NEUTRAL_EVIL)
+	!Alignment(Player1,CHAOTIC_NEUTRAL)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("Stripped","GLOBAL",1)
+		ActionOverride(Player1,AddKit(0))
+		DisplayString(Player1,@21)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VMIRROR","GLOBAL",0)
+	Class(Player1,PALADIN_ALL)
+	!FallenPaladin(Player1)
+	GlobalGT("D0Strikes","GLOBAL",1)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride(Player1,RemovePaladinHood())
+		Continue()
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VMIRROR","GLOBAL",0)
+	GlobalLT("D0VIRTUE","GLOBAL",7)
+	Class(Player1,RANGER_ALL)
+	!Class(Player1,CLERIC_RANGER)
+	!FallenRanger(Player1)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride(Player1,RemoveRangerHood())
+		Continue()
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",0)
+	Alignment(Player1,MASK_EVIL)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VIRTUE","GLOBAL",7)
+		SetGlobal("D0VMIRROR","GLOBAL",7)
+		SetGlobal("VirtueSetup","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@15)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",0)
+	Alignment(Player1,MASK_GENEUTRAL)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VIRTUE","GLOBAL",11)
+		SetGlobal("D0VMIRROR","GLOBAL",11)
+		SetGlobal("VirtueSetup","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",0)
+	Alignment(Player1,MASK_GOOD)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VIRTUE","GLOBAL",14)
+		SetGlobal("D0VMIRROR","GLOBAL",14)
+		SetGlobal("VirtueSetup","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",7)
+	!Alignment(Player1,MASK_EVIL)
+	Alignment(Player1,MASK_CHAOTIC)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,CHAOTIC_EVIL)
+		DisplayStringHead(Player1,@5)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",7)
+	!Alignment(Player1,MASK_EVIL)
+	Alignment(Player1,MASK_LCNEUTRAL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,NEUTRAL_EVIL)
+		DisplayStringHead(Player1,@6)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",7)
+	!Alignment(Player1,MASK_EVIL)
+	Alignment(Player1,MASK_LAWFUL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,LAWFUL_EVIL)
+		DisplayStringHead(Player1,@7)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",8)
+	GlobalLT("D0VIRTUE","GLOBAL",13)
+	!Alignment(Player1,MASK_GENEUTRAL)
+	Alignment(Player1,MASK_CHAOTIC)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,CHAOTIC_NEUTRAL)
+		DisplayStringHead(Player1,@8)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",8)
+	GlobalLT("D0VIRTUE","GLOBAL",13)
+	!Alignment(Player1,MASK_GENEUTRAL)
+	Alignment(Player1,MASK_LCNEUTRAL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,NEUTRAL)
+		DisplayStringHead(Player1,@9)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",8)
+	GlobalLT("D0VIRTUE","GLOBAL",13)
+	!Alignment(Player1,MASK_GENEUTRAL)
+	Alignment(Player1,MASK_LAWFUL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,LAWFUL_NEUTRAL)
+		DisplayStringHead(Player1,@10)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",14)
+	!Alignment(Player1,MASK_GOOD)
+	Alignment(Player1,MASK_CHAOTIC)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,CHAOTIC_GOOD)
+		DisplayStringHead(Player1,@11)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",14)
+	!Alignment(Player1,MASK_GOOD)
+	Alignment(Player1,MASK_LCNEUTRAL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,NEUTRAL_GOOD)
+		DisplayStringHead(Player1,@12)
+END
+
+IF
+	Global("VirtueSetup","GLOBAL",1)
+	GlobalGT("D0VIRTUE","GLOBAL",14)
+	!Alignment(Player1,MASK_GOOD)
+	Alignment(Player1,MASK_LAWFUL)
+	Global("D0Change","GLOBAL",0)
+	!Global("D0VirtueDisable","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeAlignment(Player1,LAWFUL_GOOD)
+		DisplayStringHead(Player1,@13)
+END
+
+//////////////////////////////////////////////////////////////////////
+// SAFEGUARD... PERFORMANCE ISSUES?
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",1)
+	!Global("D0VMIRROR","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@14)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",2)
+	!Global("D0VMIRROR","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@14)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",3)
+	!Global("D0VMIRROR","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@14)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",4)
+	!Global("D0VMIRROR","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@14)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",5)
+	!Global("D0VMIRROR","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",5)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@15)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",6)
+	!Global("D0VMIRROR","GLOBAL",6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",6)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@15)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",7)
+	!Global("D0VMIRROR","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",7)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@15)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",8)
+	!Global("D0VMIRROR","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",8)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",9)
+	!Global("D0VMIRROR","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",9)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",10)
+	!Global("D0VMIRROR","GLOBAL",10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",10)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",11)
+	!Global("D0VMIRROR","GLOBAL",11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",11)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",12)
+	!Global("D0VMIRROR","GLOBAL",12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",12)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@16)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",13)
+	!Global("D0VMIRROR","GLOBAL",13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",13)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",14)
+	!Global("D0VMIRROR","GLOBAL",14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",14)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",15)
+	!Global("D0VMIRROR","GLOBAL",15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",15)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",16)
+	!Global("D0VMIRROR","GLOBAL",16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",16)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@17)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",17)
+	!Global("D0VMIRROR","GLOBAL",17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",17)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@18)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",18)
+	!Global("D0VMIRROR","GLOBAL",18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",18)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@18)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	Global("D0VIRTUE","GLOBAL",19)
+	!Global("D0VMIRROR","GLOBAL",19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",19)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@18)
+		Continue()
+END
+
+IF
+	!GlobalsEqual("D0VIRTUE","D0VMIRROR")
+	GlobalGT("D0VIRTUE","GLOBAL",19)
+	!Global("D0VMIRROR","GLOBAL",20)
+THEN
+	RESPONSE #100
+		SetGlobal("D0VMIRROR","GLOBAL",20)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		SetToken("VDESC",@18)
+		Continue()
+END
+
+//////////////////////////////////////////////////////////////////////
+// REPUTATION CHANGES - NPC HAPPINESS
+
+IF
+	Global("D0Chg2","GLOBAL",1)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",1)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",1)
+		IncrementGlobal("D0CerndHappy","GLOBAL",1)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",1)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",1)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",1)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",1)
+		IncrementGlobal("D0JanHappy","GLOBAL",1)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",1)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",1)
+		IncrementGlobal("D0KetoHappy","GLOBAL",1)
+		IncrementGlobal("D0KorganHappy","GLOBAL",1)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",1)
+		IncrementGlobal("D0MinscHappy","GLOBAL",1)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",1)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",1)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",1)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",1)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",2)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",2)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",2)
+		IncrementGlobal("D0CerndHappy","GLOBAL",2)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",2)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",2)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",2)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",2)
+		IncrementGlobal("D0JanHappy","GLOBAL",2)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",2)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",2)
+		IncrementGlobal("D0KetoHappy","GLOBAL",2)
+		IncrementGlobal("D0KorganHappy","GLOBAL",2)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",2)
+		IncrementGlobal("D0MinscHappy","GLOBAL",2)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",2)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",2)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",2)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",2)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",2)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",3)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",3)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",3)
+		IncrementGlobal("D0CerndHappy","GLOBAL",3)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",3)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",3)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",3)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",3)
+		IncrementGlobal("D0JanHappy","GLOBAL",3)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",3)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",3)
+		IncrementGlobal("D0KetoHappy","GLOBAL",3)
+		IncrementGlobal("D0KorganHappy","GLOBAL",3)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",3)
+		IncrementGlobal("D0MinscHappy","GLOBAL",3)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",3)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",3)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",3)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",3)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",3)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",4)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",4)
+		IncrementGlobal("D0CerndHappy","GLOBAL",4)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",4)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",4)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",4)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",4)
+		IncrementGlobal("D0JanHappy","GLOBAL",4)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",4)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",4)
+		IncrementGlobal("D0KetoHappy","GLOBAL",4)
+		IncrementGlobal("D0KorganHappy","GLOBAL",4)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",4)
+		IncrementGlobal("D0MinscHappy","GLOBAL",4)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",4)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",4)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",4)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",4)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",4)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",5)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",5)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",5)
+		IncrementGlobal("D0CerndHappy","GLOBAL",5)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",5)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",5)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",5)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",5)
+		IncrementGlobal("D0JanHappy","GLOBAL",5)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",5)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",5)
+		IncrementGlobal("D0KetoHappy","GLOBAL",5)
+		IncrementGlobal("D0KorganHappy","GLOBAL",5)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",5)
+		IncrementGlobal("D0MinscHappy","GLOBAL",5)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",5)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",5)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",5)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",5)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",5)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",6)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",6)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",6)
+		IncrementGlobal("D0CerndHappy","GLOBAL",6)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",6)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",6)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",6)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",6)
+		IncrementGlobal("D0JanHappy","GLOBAL",6)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",6)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",6)
+		IncrementGlobal("D0KetoHappy","GLOBAL",6)
+		IncrementGlobal("D0KorganHappy","GLOBAL",6)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",6)
+		IncrementGlobal("D0MinscHappy","GLOBAL",6)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",6)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",6)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",6)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",6)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",6)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",7)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",7)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",7)
+		IncrementGlobal("D0CerndHappy","GLOBAL",7)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",7)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",7)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",7)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",7)
+		IncrementGlobal("D0JanHappy","GLOBAL",7)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",7)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",7)
+		IncrementGlobal("D0KetoHappy","GLOBAL",7)
+		IncrementGlobal("D0KorganHappy","GLOBAL",7)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",7)
+		IncrementGlobal("D0MinscHappy","GLOBAL",7)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",7)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",7)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",7)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",7)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",7)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",8)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",8)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",8)
+		IncrementGlobal("D0CerndHappy","GLOBAL",8)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",8)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",8)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",8)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",8)
+		IncrementGlobal("D0JanHappy","GLOBAL",8)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",8)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",8)
+		IncrementGlobal("D0KetoHappy","GLOBAL",8)
+		IncrementGlobal("D0KorganHappy","GLOBAL",8)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",8)
+		IncrementGlobal("D0MinscHappy","GLOBAL",8)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",8)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",8)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",8)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",8)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",8)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",9)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",9)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",9)
+		IncrementGlobal("D0CerndHappy","GLOBAL",9)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",9)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",9)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",9)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",9)
+		IncrementGlobal("D0JanHappy","GLOBAL",9)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",9)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",9)
+		IncrementGlobal("D0KetoHappy","GLOBAL",9)
+		IncrementGlobal("D0KorganHappy","GLOBAL",9)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",9)
+		IncrementGlobal("D0MinscHappy","GLOBAL",9)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",9)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",9)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",9)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",9)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",9)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",10)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",10)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",10)
+		IncrementGlobal("D0CerndHappy","GLOBAL",10)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",10)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",10)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",10)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",10)
+		IncrementGlobal("D0JanHappy","GLOBAL",10)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",10)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",10)
+		IncrementGlobal("D0KetoHappy","GLOBAL",10)
+		IncrementGlobal("D0KorganHappy","GLOBAL",10)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",10)
+		IncrementGlobal("D0MinscHappy","GLOBAL",10)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",10)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",10)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",10)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",10)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",10)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",11)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",11)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",11)
+		IncrementGlobal("D0CerndHappy","GLOBAL",11)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",11)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",11)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",11)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",11)
+		IncrementGlobal("D0JanHappy","GLOBAL",11)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",11)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",11)
+		IncrementGlobal("D0KetoHappy","GLOBAL",11)
+		IncrementGlobal("D0KorganHappy","GLOBAL",11)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",11)
+		IncrementGlobal("D0MinscHappy","GLOBAL",11)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",11)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",11)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",11)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",11)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",11)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",12)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",12)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",12)
+		IncrementGlobal("D0CerndHappy","GLOBAL",12)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",12)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",12)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",12)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",12)
+		IncrementGlobal("D0JanHappy","GLOBAL",12)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",12)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",12)
+		IncrementGlobal("D0KetoHappy","GLOBAL",12)
+		IncrementGlobal("D0KorganHappy","GLOBAL",12)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",12)
+		IncrementGlobal("D0MinscHappy","GLOBAL",12)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",12)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",12)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",12)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",12)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",12)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",13)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",13)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",13)
+		IncrementGlobal("D0CerndHappy","GLOBAL",13)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",13)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",13)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",13)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",13)
+		IncrementGlobal("D0JanHappy","GLOBAL",13)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",13)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",13)
+		IncrementGlobal("D0KetoHappy","GLOBAL",13)
+		IncrementGlobal("D0KorganHappy","GLOBAL",13)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",13)
+		IncrementGlobal("D0MinscHappy","GLOBAL",13)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",13)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",13)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",13)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",13)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",13)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",14)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",14)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",14)
+		IncrementGlobal("D0CerndHappy","GLOBAL",14)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",14)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",14)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",14)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",14)
+		IncrementGlobal("D0JanHappy","GLOBAL",14)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",14)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",14)
+		IncrementGlobal("D0KetoHappy","GLOBAL",14)
+		IncrementGlobal("D0KorganHappy","GLOBAL",14)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",14)
+		IncrementGlobal("D0MinscHappy","GLOBAL",14)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",14)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",14)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",14)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",14)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",14)
+		Continue()
+END
+IF
+	Global("D0Chg2","GLOBAL",15)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",15)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",15)
+		IncrementGlobal("D0CerndHappy","GLOBAL",15)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",15)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",15)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",15)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",15)
+		IncrementGlobal("D0JanHappy","GLOBAL",15)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",15)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",15)
+		IncrementGlobal("D0KetoHappy","GLOBAL",15)
+		IncrementGlobal("D0KorganHappy","GLOBAL",15)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",15)
+		IncrementGlobal("D0MinscHappy","GLOBAL",15)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",15)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",15)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",15)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",15)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",15)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",16)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",16)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",16)
+		IncrementGlobal("D0CerndHappy","GLOBAL",16)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",16)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",16)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",16)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",16)
+		IncrementGlobal("D0JanHappy","GLOBAL",16)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",16)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",16)
+		IncrementGlobal("D0KetoHappy","GLOBAL",16)
+		IncrementGlobal("D0KorganHappy","GLOBAL",16)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",16)
+		IncrementGlobal("D0MinscHappy","GLOBAL",16)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",16)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",16)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",16)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",16)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",16)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",17)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",17)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",17)
+		IncrementGlobal("D0CerndHappy","GLOBAL",17)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",17)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",17)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",17)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",17)
+		IncrementGlobal("D0JanHappy","GLOBAL",17)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",17)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",17)
+		IncrementGlobal("D0KetoHappy","GLOBAL",17)
+		IncrementGlobal("D0KorganHappy","GLOBAL",17)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",17)
+		IncrementGlobal("D0MinscHappy","GLOBAL",17)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",17)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",17)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",17)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",17)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",17)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",18)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",18)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",18)
+		IncrementGlobal("D0CerndHappy","GLOBAL",18)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",18)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",18)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",18)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",18)
+		IncrementGlobal("D0JanHappy","GLOBAL",18)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",18)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",18)
+		IncrementGlobal("D0KetoHappy","GLOBAL",18)
+		IncrementGlobal("D0KorganHappy","GLOBAL",18)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",18)
+		IncrementGlobal("D0MinscHappy","GLOBAL",18)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",18)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",18)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",18)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",18)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",18)
+		Continue()
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",18)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",19)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",19)
+		IncrementGlobal("D0CerndHappy","GLOBAL",19)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",19)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",19)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",19)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",19)
+		IncrementGlobal("D0JanHappy","GLOBAL",19)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",19)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",19)
+		IncrementGlobal("D0KetoHappy","GLOBAL",19)
+		IncrementGlobal("D0KorganHappy","GLOBAL",19)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",19)
+		IncrementGlobal("D0MinscHappy","GLOBAL",19)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",19)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",19)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",19)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",19)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",19)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-1)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-1)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-1)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-1)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-1)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-1)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-1)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-1)
+		IncrementGlobal("D0JanHappy","GLOBAL",-1)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-1)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-1)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-1)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-1)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-1)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-1)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-1)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-1)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-1)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-1)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-1)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-2)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-2)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-2)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-2)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-2)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-2)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-2)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-2)
+		IncrementGlobal("D0JanHappy","GLOBAL",-2)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-2)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-2)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-2)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-2)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-2)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-2)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-2)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-2)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-2)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-2)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-2)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-3)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-3)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-3)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-3)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-3)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-3)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-3)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-3)
+		IncrementGlobal("D0JanHappy","GLOBAL",-3)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-3)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-3)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-3)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-3)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-3)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-3)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-3)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-3)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-3)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-3)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-3)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-4)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-4)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-4)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-4)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-4)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-4)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-4)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-4)
+		IncrementGlobal("D0JanHappy","GLOBAL",-4)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-4)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-4)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-4)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-4)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-4)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-4)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-4)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-4)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-4)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-4)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-4)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-5)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-5)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-5)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-5)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-5)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-5)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-5)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-5)
+		IncrementGlobal("D0JanHappy","GLOBAL",-5)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-5)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-5)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-5)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-5)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-5)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-5)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-5)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-5)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-5)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-5)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-5)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-6)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-6)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-6)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-6)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-6)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-6)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-6)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-6)
+		IncrementGlobal("D0JanHappy","GLOBAL",-6)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-6)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-6)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-6)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-6)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-6)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-6)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-6)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-6)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-6)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-6)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-6)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-7)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-7)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-7)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-7)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-7)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-7)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-7)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-7)
+		IncrementGlobal("D0JanHappy","GLOBAL",-7)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-7)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-7)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-7)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-7)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-7)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-7)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-7)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-7)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-7)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-7)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-7)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-8)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-8)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-8)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-8)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-8)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-8)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-8)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-8)
+		IncrementGlobal("D0JanHappy","GLOBAL",-8)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-8)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-8)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-8)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-8)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-8)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-8)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-8)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-8)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-8)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-8)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-8)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-9)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-9)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-9)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-9)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-9)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-9)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-9)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-9)
+		IncrementGlobal("D0JanHappy","GLOBAL",-9)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-9)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-9)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-9)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-9)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-9)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-9)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-9)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-9)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-9)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-9)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-9)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-10)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-10)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-10)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-10)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-10)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-10)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-10)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-10)
+		IncrementGlobal("D0JanHappy","GLOBAL",-10)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-10)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-10)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-10)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-10)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-10)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-10)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-10)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-10)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-10)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-10)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-10)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-11)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-11)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-11)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-11)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-11)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-11)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-11)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-11)
+		IncrementGlobal("D0JanHappy","GLOBAL",-11)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-11)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-11)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-11)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-11)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-11)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-11)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-11)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-11)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-11)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-11)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-11)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-12)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-12)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-12)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-12)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-12)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-12)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-12)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-12)
+		IncrementGlobal("D0JanHappy","GLOBAL",-12)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-12)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-12)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-12)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-12)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-12)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-12)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-12)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-12)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-12)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-12)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-12)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-13)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-13)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-13)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-13)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-13)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-13)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-13)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-13)
+		IncrementGlobal("D0JanHappy","GLOBAL",-13)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-13)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-13)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-13)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-13)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-13)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-13)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-13)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-13)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-13)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-13)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-13)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-14)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-14)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-14)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-14)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-14)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-14)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-14)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-14)
+		IncrementGlobal("D0JanHappy","GLOBAL",-14)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-14)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-14)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-14)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-14)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-14)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-14)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-14)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-14)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-14)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-14)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-14)
+		Continue()
+END
+IF
+	Global("D0Chg2","GLOBAL",-15)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-15)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-15)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-15)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-15)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-15)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-15)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-15)
+		IncrementGlobal("D0JanHappy","GLOBAL",-15)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-15)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-15)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-15)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-15)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-15)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-15)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-15)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-15)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-15)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-15)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-15)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-16)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-16)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-16)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-16)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-16)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-16)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-16)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-16)
+		IncrementGlobal("D0JanHappy","GLOBAL",-16)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-16)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-16)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-16)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-16)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-16)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-16)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-16)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-16)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-16)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-16)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-16)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-17)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-17)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-17)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-17)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-17)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-17)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-17)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-17)
+		IncrementGlobal("D0JanHappy","GLOBAL",-17)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-17)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-17)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-17)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-17)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-17)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-17)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-17)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-17)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-17)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-17)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-17)
+		Continue()
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-18)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-18)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-18)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-18)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-18)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-18)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-18)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-18)
+		IncrementGlobal("D0JanHappy","GLOBAL",-18)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-18)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-18)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-18)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-18)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-18)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-18)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-18)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-18)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-18)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-18)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-18)
+		Continue()
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-18)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0AerieHappy","GLOBAL",-19)
+		IncrementGlobal("D0AnomenHappy","GLOBAL",-19)
+		IncrementGlobal("D0CerndHappy","GLOBAL",-19)
+		IncrementGlobal("D0EdwinHappy","GLOBAL",-19)
+		IncrementGlobal("D0HaerDalisHappy","GLOBAL",-19)
+		IncrementGlobal("D0ImoenHappy","GLOBAL",-19)
+		IncrementGlobal("D0JaheiraHappy","GLOBAL",-19)
+		IncrementGlobal("D0JanHappy","GLOBAL",-19)
+		IncrementGlobal("D0KeldornHappy","GLOBAL",-19)
+		IncrementGlobal("D0KelseyHappy","GLOBAL",-19)
+		IncrementGlobal("D0KetoHappy","GLOBAL",-19)
+		IncrementGlobal("D0KorganHappy","GLOBAL",-19)
+		IncrementGlobal("D0MazzyHappy","GLOBAL",-19)
+		IncrementGlobal("D0MinscHappy","GLOBAL",-19)
+		IncrementGlobal("D0NaliaHappy","GLOBAL",-19)
+		IncrementGlobal("D0ValygarHappy","GLOBAL",-19)
+		IncrementGlobal("D0ViconiaHappy","GLOBAL",-19)
+		IncrementGlobal("D0YoshimoHappy","GLOBAL",-19)
+		IncrementGlobal("D0SarevokHappy","GLOBAL",-19)
+		Continue()
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",0)
+	ReputationGT(Player1,19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",0)
+	ReputationLT(Player1,2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",0)
+	Reputation(Player1,19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(1)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",1)
+	Reputation(Player1,18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(2)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",2)
+	Reputation(Player1,17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(3)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",3)
+	Reputation(Player1,16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(4)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",4)
+	Reputation(Player1,15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(5)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",5)
+	Reputation(Player1,14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(6)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",6)
+	Reputation(Player1,13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(7)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",7)
+	Reputation(Player1,12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(8)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",8)
+	Reputation(Player1,11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(9)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",9)
+	Reputation(Player1,10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(10)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",10)
+	Reputation(Player1,9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(11)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",11)
+	Reputation(Player1,8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(12)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",12)
+	Reputation(Player1,7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(13)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",13)
+	Reputation(Player1,6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(14)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",14)
+	Reputation(Player1,5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(15)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",15)
+	Reputation(Player1,4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(16)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",16)
+	Reputation(Player1,3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(17)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",17)
+	Reputation(Player1,2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(18)
+END
+
+IF
+	GlobalGT("D0Chg2","GLOBAL",18)
+	Reputation(Player1,1)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(19)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",1)
+	ReputationLT(Player1,19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(1)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",2)
+	ReputationLT(Player1,18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(2)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",3)
+	ReputationLT(Player1,17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(3)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",4)
+	ReputationLT(Player1,16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(4)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",5)
+	ReputationLT(Player1,15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(5)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",6)
+	ReputationLT(Player1,14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(6)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",7)
+	ReputationLT(Player1,13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(7)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",8)
+	ReputationLT(Player1,12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(8)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",9)
+	ReputationLT(Player1,11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(9)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",10)
+	ReputationLT(Player1,10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(10)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",11)
+	ReputationLT(Player1,9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(11)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",12)
+	ReputationLT(Player1,8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(12)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",13)
+	ReputationLT(Player1,7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(13)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",14)
+	ReputationLT(Player1,6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(14)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",15)
+	ReputationLT(Player1,5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(15)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",16)
+	ReputationLT(Player1,4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(16)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",17)
+	ReputationLT(Player1,3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(17)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",18)
+	ReputationLT(Player1,2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(18)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",0)
+	Reputation(Player1,2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-1)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-1)
+	Reputation(Player1,3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-2)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-2)
+	Reputation(Player1,4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-3)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-3)
+	Reputation(Player1,5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-4)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-4)
+	Reputation(Player1,6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-5)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-5)
+	Reputation(Player1,7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-6)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-6)
+	Reputation(Player1,8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-7)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-7)
+	Reputation(Player1,9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-8)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-8)
+	Reputation(Player1,10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-9)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-9)
+	Reputation(Player1,11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-10)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-10)
+	Reputation(Player1,12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-11)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-11)
+	Reputation(Player1,13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-12)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-12)
+	Reputation(Player1,14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-13)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-13)
+	Reputation(Player1,15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-14)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-14)
+	Reputation(Player1,16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-15)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-15)
+	Reputation(Player1,17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-16)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-16)
+	Reputation(Player1,18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-17)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-17)
+	Reputation(Player1,19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-18)
+END
+
+IF
+	GlobalLT("D0Chg2","GLOBAL",-18)
+	Reputation(Player1,20)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-19)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-1)
+	ReputationGT(Player1,2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-1)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-2)
+	ReputationGT(Player1,3)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-2)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-3)
+	ReputationGT(Player1,4)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-3)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-4)
+	ReputationGT(Player1,5)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-4)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-5)
+	ReputationGT(Player1,6)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-5)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-6)
+	ReputationGT(Player1,7)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-6)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-7)
+	ReputationGT(Player1,8)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-7)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-8)
+	ReputationGT(Player1,9)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-8)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-9)
+	ReputationGT(Player1,10)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-9)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-10)
+	ReputationGT(Player1,11)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-10)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-11)
+	ReputationGT(Player1,12)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-11)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-12)
+	ReputationGT(Player1,13)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-12)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-13)
+	ReputationGT(Player1,14)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-13)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-14)
+	ReputationGT(Player1,15)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-14)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-15)
+	ReputationGT(Player1,16)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-15)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-16)
+	ReputationGT(Player1,17)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-16)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-17)
+	ReputationGT(Player1,18)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-17)
+END
+
+IF
+	Global("D0Chg2","GLOBAL",-18)
+	ReputationGT(Player1,19)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Chg2","GLOBAL",0)
+		ReputationInc(-18)
+END

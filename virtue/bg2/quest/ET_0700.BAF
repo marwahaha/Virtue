@@ -1,0 +1,251 @@
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	!Dead("Jaheira")
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-4)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@401)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	!Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-3)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@404)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	!Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@405)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	!Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@406)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	Dead("Jaheira")
+	GlobalGT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@402)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	!Dead("Minsc")
+	Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@407)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	Dead("Minsc")
+	!Dead("Jaheira")
+	GlobalGT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@403)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!Global("JaheiraReleased","GLOBAL",1)
+    !InParty("Minsc")
+	!InParty("Jaheira")
+	Dead("Minsc")
+	!Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@408)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("JaheiraReleased","GLOBAL",1)
+	Global("D0NPCsFree","GLOBAL",0)
+    !InParty("Minsc")
+	!Dead("Minsc")
+	GlobalGT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@402)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("JaheiraReleased","GLOBAL",1)
+	Global("D0NPCsFree","GLOBAL",0)
+    !InParty("Minsc")
+	!Dead("Minsc")
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@407)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",1)
+	!Global("JaheiraReleased","GLOBAL",1)
+	!InParty("Jaheira")
+	!Dead("Jaheira")
+	GlobalGT("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-2)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@403)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",1)
+	!Global("JaheiraReleased","GLOBAL",1)
+	!InParty("Jaheira")
+	!Dead("Jaheira")
+	Global("D0VIRTUE","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+		IncrementGlobal("D0VIRTUE","GLOBAL",-1)
+		SetTokenGlobal("D0VIRTUE","GLOBAL","VIRTUE")
+		DisplayStringNoName(Myself,@408)
+		PlaySound("REPDOWN")
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	!Global("JaheiraReleased","GLOBAL",1)
+	!InParty("Jaheira")
+	Global("SPRITE_IS_DEADJaheira","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADJaheira","GLOBAL",1)
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	Global("D0NPCsFree","GLOBAL",0)
+	!InParty("Minsc")
+	Global("SPRITE_IS_DEADMinsc","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADMinsc","GLOBAL",1)
+END
+
+IF
+	Global("CutScene01","AR0700",5)
+	!Global("D0NPCsFree","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("D0NPCsFree","GLOBAL",2)
+END

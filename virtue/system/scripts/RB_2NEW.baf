@@ -1,0 +1,37 @@
+IF
+	Alignment(Myself,MASK_GOOD)
+	GlobalLT("D0VIRTUE","GLOBAL",3)
+	!CheckStatGT(Player1,18,CHR)
+THEN
+	RESPONSE #100
+		Wait(1)
+		Dialogue(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("multig")
+END
+
+IF
+	Alignment(Myself,MASK_GENEUTRAL)
+	GlobalLT("D0VIRTUE","GLOBAL",2)
+	!CheckStatGT(Player1,16,CHR)
+THEN
+	RESPONSE #100
+		Wait(1)
+		Dialogue(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("multig")
+END
+
+IF
+	Alignment(Myself,MASK_EVIL)
+	GlobalGT("D0VIRTUE","GLOBAL",18)
+	!CheckStatGT(Player1,18,CHR)
+THEN
+	RESPONSE #100
+		Wait(1)
+		Dialogue(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("multig")
+END
+
+

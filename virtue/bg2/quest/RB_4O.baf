@@ -1,0 +1,17 @@
+IF
+	InParty(Myself)
+	GlobalTimerExpired("KeldornMetPlayer","GLOBAL")
+	OR(2)
+		ReputationGT(Player1,14)
+		ReputationLT(Player1,9)
+	See(Player1)
+	!StateCheck(Player1,STATE_SLEEPING)
+	CombatCounter(0)
+	Global("KeldornJudgement","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("KeldornJudgement","LOCALS",1)
+		Interact(Player1)
+END
+
+

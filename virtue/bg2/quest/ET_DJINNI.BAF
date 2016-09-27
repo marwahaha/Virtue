@@ -1,0 +1,22 @@
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,57116) // Freedom! My form crumbles, my spirit free!
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Die()
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,57116) // Freedom! My form crumbles, my spirit free!
+END

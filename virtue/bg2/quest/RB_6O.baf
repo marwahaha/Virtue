@@ -1,0 +1,12 @@
+IF
+	InParty(Myself)
+	ReputationGT(Player1,13)
+	Global("MinscGoodRep","LOCALS",0)
+	CombatCounter(0)
+	See(Player1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+

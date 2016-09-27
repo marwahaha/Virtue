@@ -1,0 +1,15 @@
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	!Global("D0IStartedIt","LOCALS",1)
+THEN
+	RESPONSE #100
+		IncrementGlobal("D0Change","GLOBAL",-1)
+END

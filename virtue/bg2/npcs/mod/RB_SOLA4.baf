@@ -1,0 +1,13 @@
+IF
+	OR(2)
+		Global("SolaJoin","GLOBAL",1)
+		Global("SolaJoin","GLOBAL",5)
+	ReputationGT(Player1,10)
+	!Global("SolaRepLoss","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("SolaRepLoss","GLOBAL",1)
+		Continue()
+END
+
+

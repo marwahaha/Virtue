@@ -1,0 +1,13 @@
+IF
+	BreakingPoint()
+THEN
+	RESPONSE #100
+		SetGlobal("IHATEYOUALL","LOCALS",1)
+		SetLeavePartyDialogFile()
+		Wait(1)
+		StartDialogueNoSet(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetGlobal("IHATEYOUALL","LOCALS",0)
+END
+
+

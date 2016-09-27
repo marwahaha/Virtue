@@ -1,0 +1,77 @@
+IF
+	!Alignment(Player1,CHAOTIC_EVIL)
+	!Alignment(Player1,NEUTRAL_EVIL)
+	!Alignment(Player1,CHAOTIC_NEUTRAL)
+	Name("talvilon",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADtalvilon","GLOBAL",1)
+		EscapeArea()
+END
+
+/* IF
+	!Alignment(Player1,CHAOTIC_EVIL)
+	!Alignment(Player1,NEUTRAL_EVIL)
+	!Alignment(Player1,CHAOTIC_NEUTRAL)
+	Name("scyarryl",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END */
+
+IF
+	!Alignment(Player1,NEUTRAL)
+	!Alignment(Player1,LAWFUL_NEUTRAL)
+	!Alignment(Player1,LAWFUL_GOOD)
+	!Alignment(Player1,LAWFUL_EVIL)
+	Name("helmbyr",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADhelmbyr","GLOBAL",1)
+		EscapeArea()
+END
+
+/* IF
+	!Alignment(Player1,NEUTRAL)
+	!Alignment(Player1,LAWFUL_NEUTRAL)
+	!Alignment(Player1,LAWFUL_GOOD)
+	!Alignment(Player1,LAWFUL_EVIL)
+	Name("sctelwyn",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END */
+
+IF
+	!Alignment(Player1,MASK_GOOD)
+	Name("latlara",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPRITE_IS_DEADlatlara","GLOBAL",1)
+		EscapeArea()
+END
+
+/* IF
+	!Alignment(Player1,MASK_GOOD)
+	Name("scsain",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END */
+
+IF
+	OR(3)
+		Name("talvilon",Myself)
+		Name("helmbyr",Myself)
+		Name("latlara",Myself)
+	NumTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		StartDialogNoSet([PC])
+END

@@ -1,0 +1,9 @@
+IF
+	!InParty(Myself)
+	Global("SolaRepLoss","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("SolaRepLoss","GLOBAL",0)
+END
+
+

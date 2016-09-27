@@ -1,0 +1,12 @@
+IF
+	InParty(Myself)
+	GlobalLT("D0Happiness","LOCALS",3)
+	Global("MinscBadRep2","LOCALS",0)
+	CombatCounter(0)
+	See(Player1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+

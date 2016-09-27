@@ -1,0 +1,559 @@
+BACKUP ~virtue/backup~
+AUTHOR ~SimDing0@hotmail.com~
+
+ALWAYS
+COPY_EXISTING_REGEXP GLOB ~^anomen[0-9]*\.cre~ ~override~
+                         ~^imoen[0-9]*\.cre~  ~override~
+                         ~^mazzy[0-9]*\.cre~  ~override~
+ READ_LONG 0x244 "current_kit_value"
+ PATCH_IF ("%current_kit_value%" = 0x00000000) BEGIN
+   WRITE_LONG 0x244 0x40000000
+ END
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP GLOB ~^haer[0-9]*\.cre~ ~override~
+ READ_LONG 0x244 "current_kit_value"
+ PATCH_IF ("%current_kit_value%" = 0x00000020) BEGIN
+   WRITE_LONG 0x244 0x400d0000
+ END
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP GLOB ~^korgan[0-9]*\.cre~ ~override~
+ READ_LONG 0x244 "current_kit_value"
+ PATCH_IF ("%current_kit_value%" = 0x00010000) BEGIN
+   WRITE_LONG 0x244 0x40010000
+ END
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~kit.ids~ ~override~
+REPLACE_TEXTUALLY ~.*\bTRUECLASS\b~              ~0x4000 TRUECLASS~
+REPLACE_TEXTUALLY ~.*\bBERSERKER\b~              ~0x4001 BERSERKER~
+REPLACE_TEXTUALLY ~.*\bWIZARDSLAYER\b~           ~0x4002 WIZARDSLAYER~
+REPLACE_TEXTUALLY ~.*\bKENSAI\b~                 ~0x4003 KENSAI~
+REPLACE_TEXTUALLY ~.*\bCAVALIER\b~               ~0x4004 CAVALIER~
+REPLACE_TEXTUALLY ~.*\bINQUISITOR\b~             ~0x4005 INQUISITOR~
+REPLACE_TEXTUALLY ~.*\bUNDEADHUNTER\b~           ~0x4006 UNDEADHUNTER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_ABJURER\b~     ~0x0040 MAGESCHOOL_ABJURER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_CONJURER\b~    ~0x0080 MAGESCHOOL_CONJURER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_DIVINER\b~     ~0x0100 MAGESCHOOL_DIVINER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_ENCHANTER\b~   ~0x0200 MAGESCHOOL_ENCHANTER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_ILLUSIONIST\b~ ~0x0400 MAGESCHOOL_ILLUSIONIST~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_INVOKER\b~     ~0x0800 MAGESCHOOL_INVOKER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_NECROMANCER\b~ ~0x1000 MAGESCHOOL_NECROMANCER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_TRANSMUTER\b~  ~0x2000 MAGESCHOOL_TRANSMUTER~
+REPLACE_TEXTUALLY ~.*\bMAGESCHOOL_GENERALIST\b~  ~0x0000 WILDMAGE~
+REPLACE_TEXTUALLY ~.*\bFERALAN\b~                ~0x4007 FERALAN~
+REPLACE_TEXTUALLY ~.*\bSTALKER\b~                ~0x4008 STALKER~
+REPLACE_TEXTUALLY ~.*\bBEASTMASTER\b~            ~0x4009 BEASTMASTER~
+REPLACE_TEXTUALLY ~.*\bASSASIN\b~                ~0x400A ASSASIN~
+REPLACE_TEXTUALLY ~.*\bBOUNTYHUNTER\b~           ~0x400B BOUNTYHUNTER~
+REPLACE_TEXTUALLY ~.*\bSWASHBUCKLER\b~           ~0x400C SWASHBUCKLER~
+REPLACE_TEXTUALLY ~.*\bBLADE\b~                  ~0x400D BLADE~
+REPLACE_TEXTUALLY ~.*\bJESTER\b~                 ~0x400E JESTER~
+REPLACE_TEXTUALLY ~.*\bSKALD\b~                  ~0x400F SKALD~
+REPLACE_TEXTUALLY ~.*\bGODTALOS\b~               ~0x4013 GODTALOS~
+REPLACE_TEXTUALLY ~.*\bGODHELM\b~                ~0x4014 GODHELM~
+REPLACE_TEXTUALLY ~.*\bGODLATHANDER\b~           ~0x4015 GODLATHANDER~
+REPLACE_TEXTUALLY ~.*\bTOTEMIC\b~                ~0x4010 TOTEMIC~
+REPLACE_TEXTUALLY ~.*\bSHAPESHIFTER\b~           ~0x4011 SHAPESHIFTER~
+REPLACE_TEXTUALLY ~.*\bBEASTFRIEND\b~            ~0x4012 BEASTFRIEND~
+REPLACE_TEXTUALLY ~.*\bBARBARIAN\b~              ~0x0000 BARBARIAN~
+REPLACE_TEXTUALLY ~.*\bWILDMAGE\b~               ~0x0000 WILDMAGE~
+BUT_ONLY_IF_IT_CHANGES
+
+APPEND ~kit.ids~ ~0x4000 TRUECLASS~
+UNLESS ~\bTRUECLASS\b~
+APPEND ~kit.ids~ ~0x0000 BARBARIAN~
+UNLESS ~\bBARBARIAN\b~
+APPEND ~kit.ids~ ~0x0000 WILDMAGE~
+UNLESS ~\bWILDMAGE\b~
+
+APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~
+
+APPEND ~ACTION.IDS~
+~31 SpellRES(S:RES*,O:Target*)~
+UNLESS ~31 SpellRES(S:RES*,O:Target*)~
+APPEND ~ACTION.IDS~
+~95 SpellPointRES(S:RES*,P:Target*)~
+UNLESS ~95 SpellPointRES(S:RES*,P:Target*)~
+APPEND ~ACTION.IDS~
+~113 ForceSpellRES(S:RES*,O:Target)~
+UNLESS ~113 ForceSpellRES(S:RES*,O:Target)~
+APPEND ~ACTION.IDS~
+~114 ForceSpellPointRES(S:RES*,P:Target)~
+UNLESS ~114 ForceSpellPointRES(S:RES*,P:Target)~
+APPEND ~ACTION.IDS~
+~160 ApplySpellRES(S:RES*,O:Target)~
+UNLESS ~160 ApplySpellRES(S:RES*,O:Target)~
+APPEND ~ACTION.IDS~
+~181 ReallyForceSpellRES(S:RES*,O:Target)~
+UNLESS ~181 ReallyForceSpellRES(S:RES*,O:Target)~
+APPEND ~ACTION.IDS~
+~191 SpellNoDecRES(S:RES*,O:Target*)~
+UNLESS ~191 SpellNoDecRES(S:RES*,O:Target*)~
+APPEND ~ACTION.IDS~
+~192 SpellPointNoDecRES(S:RES*,P:Target*)~
+UNLESS ~192 SpellPointNoDecRES(S:RES*,P:Target*)~
+APPEND ~ACTION.IDS~
+~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
+UNLESS ~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
+APPEND ~ACTION.IDS~
+~318 ForceSpellRangeRES(S:RES*,O:Target)~
+UNLESS ~318 ForceSpellRangeRES(S:RES*,O:Target)~
+APPEND ~ACTION.IDS~
+~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
+UNLESS ~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
+APPEND ~ACTION.IDS~
+~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
+UNLESS ~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
+APPEND ~TRIGGER.IDS~
+~0x4031 HaveSpellRES(S:Spell*)~
+UNLESS ~0x4031 HaveSpellRES(S:Spell*)~
+
+APPEND ~ACTION.IDS~
+~335 SetTokenGlobal(S:GLOBAL*,S:Area*,S:Token*)~
+UNLESS ~335 SetTokenGlobal(S:GLOBAL*,S:Area*,S:Token*)~
+
+APPEND ~CLASS.IDS~
+~202 LONG_BOW~
+UNLESS ~202 LONG_BOW~
+APPEND ~CLASS.IDS~
+~202 MAGE_ALL~
+UNLESS ~202 MAGE_ALL~
+
+// FIX ANY ERRORS BEFORE INSTALL
+COPY_EXISTING ~kit.ids~ ~override~
+REPLACE_TEXTUALLY ~0X401F~ ~0x401F~
+ACTION_IF NOT FILE_EXISTS ~override/ar2812.bcs~
+THEN BEGIN
+COPY ~virtue/system/virtue_blank.bcs~ ~override/ar2812.bcs~
+END
+ACTION_IF FILE_EXISTS ~override/cm7000.bcs~
+THEN BEGIN
+EXTEND_TOP ~cm7000.bcs~ ~virtue/system/virtue_blank.bcs~
+END
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rdog.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rdwarf.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/retter.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rgibbler.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rhalflin.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rhobgoba.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rhobgobf.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rkobold.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rogre.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rsiren.bcs~
+COPY ~virtue/system/virtue_blank.bcs~ ~override/rsirine.bcs~
+
+AT_INTERACTIVE_EXIT ~view virtue/readme.txt~
+END
+
+LANGUAGE ~English~
+         ~virtue/translations/english~
+         ~virtue/translations/english/virtue.tra~
+LANGUAGE ~French (by Raphaël Mizrahi)~
+         ~virtue/translations/french~
+         ~virtue/translations/french/virtue.tra~
+LANGUAGE ~Spanish (by Bhasbuto/Clan DLAN)~
+         ~virtue/translations/spanish~
+         ~virtue/translations/spanish/virtue.tra~
+LANGUAGE ~Polish (by Damian Staniszewski)~
+         ~virtue/translations/polish~
+         ~virtue/translations/polish/virtue.tra~
+LANGUAGE ~Czech (by Zbynìk Veir)~
+         ~virtue/translations/czech~
+         ~virtue/translations/czech/virtue.tra~
+LANGUAGE ~Italian (by Al17, http://rtt.altervista.org)~
+         ~virtue/translations/italian~
+         ~virtue/translations/italian/virtue.tra~
+LANGUAGE ~Chinese (by killmercy)~
+         ~virtue/translations/chinese~
+         ~virtue/translations/chinese/virtue.tra~
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @1
+
+REQUIRE_FILE ~Data/25Dialog.bif~ @2
+REQUIRE_FILE ~Data/25Scripts.bif~ @2
+
+ACTION_IF FILE_EXISTS ~override/FW2600.are~
+THEN BEGIN
+REQUIRE_FILE ~override/FW1500.are~ @2001 // FAIL IF TUTU IS INSTALLED BUT NOT TOTSC
+END
+
+// SET UP CUSTOM VERSION OF INCREMENTGLOBAL
+// THIS VERSION, CALLED "IG", TAKES EITHER 0, 1 OR 2 IN PLACE OF "GLOBAL", "LOCALS" AND "MYAREA" RESPECTIVELY
+APPEND ~ACTION.IDS~
+~163 IG(S:GLOBAL*,S:Area*D0VTYPE,I:Value*)~
+UNLESS ~163 IG(S:GLOBAL*,S:Area*D0VTYPE,I:Value*)~
+
+COPY ~virtue/system/d0vtype.ids~ ~override~
+
+// AWESOME DUMMY FILE
+COPY ~virtue/system/virtue_blank.bcs~ ~override/virtue.xxx~
+
+// ADD VIRTUE TO RECORD SCREEN
+STRING_SET 9465 @3
+
+// ERADICATE THE REPUTATION SYSTEM
+COPY ~virtue/system/2da~ ~override~
+
+// ADD THE NEW ONE
+COPY_EXISTING ~DPLAYER2.BCS~ ~override~
+REPLACE_BCS_BLOCK ~virtue/system/scripts/RB_1OLD.BAF~ ~virtue/system/scripts/RB_1NEW.BAF~
+COPY_EXISTING ~DPLAYER3.BCS~ ~override~
+REPLACE_BCS_BLOCK ~virtue/system/scripts/RB_2OLD.BAF~ ~virtue/system/scripts/RB_2NEW.BAF~
+
+COPY_EXISTING ~famcat.cre~ ~override~
+              ~famcat25.cre~ ~override~
+              ~famdust.cre~ ~override~
+              ~famdus25.cre~ ~override~
+              ~famfair.cre~ ~override~
+              ~famfai25.cre~ ~override~
+              ~famfer.cre~ ~override~
+              ~famfer25.cre~ ~override~
+              ~famimp.cre~ ~override~
+              ~famimp25.cre~ ~override~
+              ~fampsd.cre~ ~override~
+              ~fampsd25.cre~ ~override~
+              ~famquas.cre~ ~override~
+              ~famqua25.cre~ ~override~
+              ~famrab.cre~ ~override~
+              ~famrab25.cre~ ~override~
+WRITE_ASCII 0x248 "D0FAMIL"
+
+COMPILE ~virtue/system/scripts/d0famil.baf~
+
+ACTION_IF NOT FILE_EXISTS ~override/FW2600.are~ // REGULAR BG2
+THEN BEGIN
+
+    COPY ~virtue/bg2/2da~ ~override~ // Reputation modifiers
+
+	COMPILE ~virtue/bg2/shouts~ // Commoner shout scripts
+
+	// SET UP THE BIOWARE NPCS TO WORK WITH IT
+	EXTEND_TOP ~AERIE.BCS~ ~virtue/bg2/npcs/et_aerie.BAF~
+	EXTEND_TOP ~AERI25.BCS~ ~virtue/bg2/npcs/et_aerie.BAF~
+	EXTEND_TOP ~ANOMEN.BCS~ ~virtue/bg2/npcs/et_anome.BAF~
+	EXTEND_TOP ~ANOM25.BCS~ ~virtue/bg2/npcs/et_anome.BAF~
+	EXTEND_TOP ~CERND.BCS~ ~virtue/bg2/npcs/et_cernd.BAF~
+	EXTEND_TOP ~CERN25.BCS~ ~virtue/bg2/npcs/et_cernd.BAF~
+	EXTEND_TOP ~EDWIN.BCS~ ~virtue/bg2/npcs/et_edwin.BAF~
+	EXTEND_TOP ~EDWI25.BCS~ ~virtue/bg2/npcs/et_edwin.BAF~
+	EXTEND_TOP ~HAERDALI.BCS~ ~virtue/bg2/npcs/et_haer.BAF~
+	EXTEND_TOP ~HAER25.BCS~ ~virtue/bg2/npcs/et_haer.BAF~
+	EXTEND_TOP ~IMOEN.BCS~ ~virtue/bg2/npcs/et_imoen.BAF~
+	EXTEND_TOP ~IMOEN2.BCS~ ~virtue/bg2/npcs/et_imoen.BAF~
+	EXTEND_TOP ~IMOE25.BCS~ ~virtue/bg2/npcs/et_imoen.BAF~
+	EXTEND_TOP ~JAHEIRA.BCS~ ~virtue/bg2/npcs/et_jahei.BAF~
+	EXTEND_TOP ~JAHE25.BCS~ ~virtue/bg2/npcs/et_jahei.BAF~
+	EXTEND_TOP ~JAN.BCS~ ~virtue/bg2/npcs/et_jan.BAF~
+	EXTEND_TOP ~JAN25.BCS~ ~virtue/bg2/npcs/et_jan.BAF~
+	EXTEND_TOP ~KELDORN.BCS~ ~virtue/bg2/npcs/et_keldo.BAF~
+	EXTEND_TOP ~KELD25.BCS~ ~virtue/bg2/npcs/et_keldo.BAF~
+	EXTEND_TOP ~KORGAN.BCS~ ~virtue/bg2/npcs/et_korga.BAF~
+	EXTEND_TOP ~KORG25.BCS~ ~virtue/bg2/npcs/et_korga.BAF~
+	EXTEND_TOP ~MAZZY.BCS~ ~virtue/bg2/npcs/et_mazzy.BAF~
+	EXTEND_TOP ~MAZZ25.BCS~ ~virtue/bg2/npcs/et_mazzy.BAF~
+	EXTEND_TOP ~MINSC.BCS~ ~virtue/bg2/npcs/et_minsc.BAF~
+	EXTEND_TOP ~MINS25.BCS~ ~virtue/bg2/npcs/et_minsc.BAF~
+	EXTEND_TOP ~NALIA.BCS~ ~virtue/bg2/npcs/et_nalia.BAF~
+	EXTEND_TOP ~NALI25.BCS~ ~virtue/bg2/npcs/et_nalia.BAF~
+	EXTEND_TOP ~VALYGAR.BCS~ ~virtue/bg2/npcs/et_valyg.BAF~
+	EXTEND_TOP ~VALY25.BCS~ ~virtue/bg2/npcs/et_valyg.BAF~
+	EXTEND_TOP ~VICONIA.BCS~ ~virtue/bg2/npcs/et_vicon.BAF~
+	EXTEND_TOP ~VICO25.BCS~ ~virtue/bg2/npcs/et_vicon.BAF~
+	EXTEND_TOP ~YOSHIMO.BCS~ ~virtue/bg2/npcs/et_yoshi.BAF~
+	EXTEND_TOP ~SAREVOK.BCS~ ~virtue/bg2/npcs/et_sarev.BAF~
+
+	COMPILE ~virtue/bg2/npcs/npc.D~ // NPC leaving dialogues
+	        ~virtue/bg2/npcs/npc2.D~ // NPC alignment changes
+			~virtue/bg2/fam_all.d~ // Familiar dialog
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // QUESTS
+
+			~virtue/bg2/quest/quest.d~ // Existing rep changes
+	        ~virtue/bg2/quest/quest2.d~ // Add new rep changes
+	        ~virtue/bg2/quest/quest3.d~ // Existing alignment checks
+
+	ACTION_IF NOT FILE_EXISTS ~override/KishOH.BCS~
+	THEN BEGIN
+	COMPILE	~virtue/bg2/temple/d0temple.baf~
+	COMPILE ~virtue/bg2/temple/temples.d~ // Temple quest dialog
+	END
+	ELSE BEGIN
+	COMPILE	~virtue/bg2/temple/oversight/d0temple.baf~
+	COMPILE ~virtue/bg2/temple/oversight/temples.d~ // With Oversight
+	END
+	COPY_EXISTING ~talvilon.cre~ ~override~
+	              ~scyarryl.cre~ ~override~
+	              ~helmbyr.cre~ ~override~
+	              ~sctelwyn.cre~ ~override~
+	              ~latlara.cre~ ~override~
+	              ~scsain.cre~ ~override~
+	WRITE_ASCII 0x250 "D0TEMPLE"
+
+	COPY ~virtue/bg2/hell/SPIN747.SPL~ ~override~
+		 ~virtue/bg2/hell/SPIN749.SPL~ ~override~
+		 ~virtue/bg2/hell/SPIN751.SPL~ ~override~
+		 ~virtue/bg2/hell/SPIN753.SPL~ ~override~
+		 ~virtue/bg2/hell/SPIN755.SPL~ ~override~
+	ACTION_IF NOT FILE_EXISTS ~override/SPHL001.SPL~
+	THEN BEGIN
+	EXTEND_TOP ~AR2900.BCS~ ~virtue/bg2/hell/et_2900_1.BAF~ // Normal Hell Trials
+	END
+	ELSE BEGIN
+	EXTEND_TOP ~AR2900.BCS~ ~virtue/bg2/hell/et_2900_2.BAF~ // Revised Hell Trials
+	END
+
+	COPY_EXISTING ~AR4500.BCS~ ~override~
+	DECOMPILE_BCS_TO_BAF
+	REPLACE_TEXTUALLY ~ReputationLT(Player1,~ ~GlobalLT("D0VIRTUE","GLOBAL",~
+	REPLACE_TEXTUALLY ~ReputationGT(Player1,~ ~GlobalGT("D0VIRTUE","GLOBAL",~
+	COMPILE_BAF_TO_BCS
+
+	COPY_EXISTING ~AR1106.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_1O.BAF~ ~virtue/bg2/quest/RB_1N.BAF~
+	COPY_EXISTING ~AR2008.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_2O.BAF~ ~virtue/bg2/quest/RB_2N.BAF~
+	COPY_EXISTING ~AR2203.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_3O.BAF~ ~virtue/bg2/quest/RB_3N.BAF~
+	COPY_EXISTING ~KELDORN.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_4O.BAF~ ~virtue/bg2/quest/RB_4N.BAF~
+	COPY_EXISTING ~MAZZY.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_5O.BAF~ ~virtue/bg2/quest/RB_5N.BAF~
+	COPY_EXISTING ~MINSC.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_6O.BAF~ ~virtue/bg2/quest/RB_6N.BAF~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_7O.BAF~ ~virtue/bg2/quest/RB_7N.BAF~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_8O.BAF~ ~virtue/bg2/quest/RB_8N.BAF~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_9O.BAF~ ~virtue/bg2/quest/RB_9N.BAF~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/RB_10O.BAF~ ~virtue/bg2/quest/RB_10N.BAF~
+
+	COPY_EXISTING ~UDSVIR08.CRE~ ~override~
+	WRITE_ASCII 0x250 "D0SVIRF"
+
+	COMPILE ~virtue/bg2/quest/cut61a.baf~
+			~virtue/bg2/quest/d0svirf.baf~
+			~virtue/bg2/quest/d0drysht.baf~
+
+	// SALADREX AND ADALON
+	EXTEND_TOP ~GORSAL.BCS~ ~virtue/bg2/quest/et_drags.BAF~
+	EXTEND_TOP ~DRAGSILV.BCS~ ~virtue/bg2/quest/et_drags.BAF~
+
+	// NETHER SCROLL LICH
+	EXTEND_TOP ~NEVA.BCS~ ~virtue/bg2/quest/et_neva.baf~
+
+	// MINSC AND JAHEIRA CAGES
+	EXTEND_BOTTOM ~AR0700.BCS~ ~virtue/bg2/quest/et_0700.baf~
+
+	// UNDERDARK GENIE
+	EXTEND_TOP ~DAGENIE.BCS~ ~virtue/bg2/quest/ET_DJINNI.BAF~
+
+	// DRYADS
+	EXTEND_TOP ~CDRYAD.BCS~ ~virtue/bg2/quest/ET_DRYADS.BAF~
+	COPY_EXISTING ~IDRYAD01.CRE~ ~override~
+	WRITE_ASCII 0x258 "d0drysht"
+	COPY_EXISTING ~IDRYAD02.CRE~ ~override~
+	              ~IDRYAD03.CRE~ ~override~
+	WRITE_ASCII 0x248 "d0drysht"
+
+	// RAYIC
+	EXTEND_TOP ~RAYIC.BCS~ ~virtue/bg2/quest/ET_RAYIC.BAF~
+
+	// UNDERDARK SLAVES
+	COPY_EXISTING ~ar2400.bcs~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/rb_11o.baf~ ~virtue/bg2/quest/rb_11n.baf~
+
+	// SPONSORING A DOG
+	COPY_EXISTING ~surly.bcs~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/quest/rb_12o.baf~ ~virtue/bg2/quest/rb_12n.baf~
+
+	// VITHAL
+	EXTEND_TOP ~dwvith.bcs~ ~virtue/bg2/quest/et_vith.baf~
+
+	// KUA-TOA POOL
+	COPY_EXISTING ~udpool2.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+	REPLACE_TEXTUALLY ~SetGlobal("corruptPool","AR2402",1)~ ~SetGlobal("corruptPool","AR2402",1)
+IncrementGlobal("D0Change","GLOBAL",-1)~
+	COMPILE_BAF_TO_BCS
+	
+	// DEMOGORGON SACRIFICE
+	COPY_EXISTING ~udsac.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+	REPLACE_TEXTUALLY ~Kill(LastTrigger)~ ~Kill(LastTrigger)
+IncrementGlobal("D0Change","GLOBAL",-1)~
+	COMPILE_BAF_TO_BCS
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// ADD VIRTUE TO MODS
+
+	// KELSEY
+	ACTION_IF FILE_EXISTS ~override/J#KLSYJ.DLG~
+	      AND FILE_EXISTS ~override/J#KLS25J.DLG~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/npcs/mod/kelsey.d~
+	EXTEND_TOP ~J#KLSY.BCS~ ~virtue/bg2/npcs/mod/et_kelse.BAF~
+	EXTEND_TOP ~J#KLSY25.BCS~ ~virtue/bg2/npcs/mod/et_kelse.BAF~
+	COPY_EXISTING ~J#KLSY.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/npcs/mod/k_RB_1a.BAF~ ~virtue/bg2/npcs/mod/k_RB_1b.BAF~
+	END
+
+    // KETO
+	ACTION_IF FILE_EXISTS ~override/FWKETO.DLG~
+	      AND FILE_EXISTS ~override/KETO.BCS~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/npcs/mod/keto.d~
+	EXTEND_TOP ~KETO.BCS~ ~virtue/bg2/npcs/mod/et_keto.BAF~
+//	EXTEND_TOP ~KETO25.BCS~ ~virtue/bg2/npcs/mod/et_keto.BAF~
+	END
+
+	// SOLAUFEIN
+	ACTION_IF FILE_EXISTS ~override/SOLA.BCS~
+	THEN BEGIN
+	COPY_EXISTING ~sola.bcs~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/npcs/mod/rb_sola1.BAF~ ~virtue/bg2/npcs/mod/rb_sola2.BAF~
+	REPLACE_BCS_BLOCK ~virtue/bg2/npcs/mod/rb_sola3.BAF~ ~virtue/bg2/npcs/mod/rb_sola4.BAF~
+	END
+
+	// TASHIA
+	ACTION_IF FILE_EXISTS ~override/TASHIAP.DLG~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/npcs/mod/tashia.d~
+	END
+
+	// VALEN
+	ACTION_IF FILE_EXISTS ~override/VALEN.DLG~
+	THEN BEGIN
+	EXTEND_TOP ~BALDUR.BCS~ ~virtue/bg2/npcs/mod/et_val.BAF~
+	EXTEND_TOP ~BALDUR25.BCS~ ~virtue/bg2/npcs/mod/et_val.BAF~
+	END
+
+	// FLIRT PACKS
+	ACTION_IF FILE_EXISTS ~override/fwaernd1.2da~
+		  AND FILE_EXISTS ~override/fwjahnd1.2da~
+		  AND FILE_EXISTS ~override/fwvicnd1.2da~
+		  AND FILE_EXISTS ~override/fwanond1.2da~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/npcs/mod/flirtpacks.d~
+	COPY_EXISTING ~AR6200.BCS~ ~override~
+	REPLACE_BCS_BLOCK ~virtue/bg2/npcs/mod/fp_rb_1a.BAF~ ~virtue/bg2/npcs/mod/fp_rb_1b.BAF~
+	END
+
+	// ASCENSION
+	ACTION_IF FILE_EXISTS ~override/balth2.dlg~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/quest/mod/ascension.d~
+	END
+
+	// ITEM UPGRADE
+	ACTION_IF FILE_EXISTS ~override/c2mazz01.itm~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/quest/mod/c2.d~
+	END
+
+	// UNFINISHED BUSINESS
+	ACTION_IF FILE_EXISTS ~override/u!kgen.dlg~
+	THEN BEGIN
+	COMPILE ~virtue/bg2/quest/mod/ubkalah.d~
+	END
+
+END
+
+ACTION_IF FILE_EXISTS ~override/FW2600.are~ // BG1TUTU
+	  AND FILE_EXISTS ~override/FW1500.are~
+THEN BEGIN
+
+	FAIL ~Tutu compatibility not yet implemented, sorry.~
+
+    COPY ~virtue/tutu/2da~ ~override~ // Reputation modifiers
+
+	COMPILE ~virtue/bg2/shouts~ // Commoner shout scripts
+
+END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// I WANT CONTROL OF REPUTATION TOO!
+COPY_EXISTING_REGEXP GLOB ~.*\.dlg~ ~override~
+REPLACE_TEXTUALLY ~ReputationInc(~ ~IG("D0Chg2",0,~
+IF ~ReputationInc(~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP GLOB ~.*\.bcs~ ~override~
+DECOMPILE_BCS_TO_BAF
+REPLACE_TEXTUALLY ~ReputationInc(1)~ ~IncrementGlobal("D0Chg2","GLOBAL",1)~
+REPLACE_TEXTUALLY ~ReputationInc(2)~ ~IncrementGlobal("D0Chg2","GLOBAL",2)~
+REPLACE_TEXTUALLY ~ReputationInc(3)~ ~IncrementGlobal("D0Chg2","GLOBAL",3)~
+REPLACE_TEXTUALLY ~ReputationInc(4)~ ~IncrementGlobal("D0Chg2","GLOBAL",4)~
+REPLACE_TEXTUALLY ~ReputationInc(5)~ ~IncrementGlobal("D0Chg2","GLOBAL",5)~
+REPLACE_TEXTUALLY ~ReputationInc(6)~ ~IncrementGlobal("D0Chg2","GLOBAL",6)~
+REPLACE_TEXTUALLY ~ReputationInc(7)~ ~IncrementGlobal("D0Chg2","GLOBAL",7)~
+REPLACE_TEXTUALLY ~ReputationInc(8)~ ~IncrementGlobal("D0Chg2","GLOBAL",8)~
+REPLACE_TEXTUALLY ~ReputationInc(9)~ ~IncrementGlobal("D0Chg2","GLOBAL",9)~
+REPLACE_TEXTUALLY ~ReputationInc(10)~ ~IncrementGlobal("D0Chg2","GLOBAL",10)~
+REPLACE_TEXTUALLY ~ReputationInc(11)~ ~IncrementGlobal("D0Chg2","GLOBAL",11)~
+REPLACE_TEXTUALLY ~ReputationInc(12)~ ~IncrementGlobal("D0Chg2","GLOBAL",12)~
+REPLACE_TEXTUALLY ~ReputationInc(13)~ ~IncrementGlobal("D0Chg2","GLOBAL",13)~
+REPLACE_TEXTUALLY ~ReputationInc(14)~ ~IncrementGlobal("D0Chg2","GLOBAL",14)~
+REPLACE_TEXTUALLY ~ReputationInc(15)~ ~IncrementGlobal("D0Chg2","GLOBAL",15)~
+REPLACE_TEXTUALLY ~ReputationInc(16)~ ~IncrementGlobal("D0Chg2","GLOBAL",16)~
+REPLACE_TEXTUALLY ~ReputationInc(17)~ ~IncrementGlobal("D0Chg2","GLOBAL",17)~
+REPLACE_TEXTUALLY ~ReputationInc(18)~ ~IncrementGlobal("D0Chg2","GLOBAL",18)~
+REPLACE_TEXTUALLY ~ReputationInc(19)~ ~IncrementGlobal("D0Chg2","GLOBAL",19)~
+REPLACE_TEXTUALLY ~ReputationInc(20)~ ~IncrementGlobal("D0Chg2","GLOBAL",20)~
+REPLACE_TEXTUALLY ~ReputationInc(-1)~ ~IncrementGlobal("D0Chg2","GLOBAL",-1)~
+REPLACE_TEXTUALLY ~ReputationInc(-2)~ ~IncrementGlobal("D0Chg2","GLOBAL",-2)~
+REPLACE_TEXTUALLY ~ReputationInc(-3)~ ~IncrementGlobal("D0Chg2","GLOBAL",-3)~
+REPLACE_TEXTUALLY ~ReputationInc(-4)~ ~IncrementGlobal("D0Chg2","GLOBAL",-4)~
+REPLACE_TEXTUALLY ~ReputationInc(-5)~ ~IncrementGlobal("D0Chg2","GLOBAL",-5)~
+REPLACE_TEXTUALLY ~ReputationInc(-6)~ ~IncrementGlobal("D0Chg2","GLOBAL",-6)~
+REPLACE_TEXTUALLY ~ReputationInc(-7)~ ~IncrementGlobal("D0Chg2","GLOBAL",-7)~
+REPLACE_TEXTUALLY ~ReputationInc(-8)~ ~IncrementGlobal("D0Chg2","GLOBAL",-8)~
+REPLACE_TEXTUALLY ~ReputationInc(-9)~ ~IncrementGlobal("D0Chg2","GLOBAL",-9)~
+REPLACE_TEXTUALLY ~ReputationInc(-10)~ ~IncrementGlobal("D0Chg2","GLOBAL",-10)~
+REPLACE_TEXTUALLY ~ReputationInc(-11)~ ~IncrementGlobal("D0Chg2","GLOBAL",-11)~
+REPLACE_TEXTUALLY ~ReputationInc(-12)~ ~IncrementGlobal("D0Chg2","GLOBAL",-12)~
+REPLACE_TEXTUALLY ~ReputationInc(-13)~ ~IncrementGlobal("D0Chg2","GLOBAL",-13)~
+REPLACE_TEXTUALLY ~ReputationInc(-14)~ ~IncrementGlobal("D0Chg2","GLOBAL",-14)~
+REPLACE_TEXTUALLY ~ReputationInc(-15)~ ~IncrementGlobal("D0Chg2","GLOBAL",-15)~
+REPLACE_TEXTUALLY ~ReputationInc(-16)~ ~IncrementGlobal("D0Chg2","GLOBAL",-16)~
+REPLACE_TEXTUALLY ~ReputationInc(-17)~ ~IncrementGlobal("D0Chg2","GLOBAL",-17)~
+REPLACE_TEXTUALLY ~ReputationInc(-18)~ ~IncrementGlobal("D0Chg2","GLOBAL",-18)~
+REPLACE_TEXTUALLY ~ReputationInc(-19)~ ~IncrementGlobal("D0Chg2","GLOBAL",-19)~
+REPLACE_TEXTUALLY ~ReputationInc(-20)~ ~IncrementGlobal("D0Chg2","GLOBAL",-20)~
+COMPILE_BAF_TO_BCS
+IF ~163~
+BUT_ONLY_IF_IT_CHANGES
+
+// SCRIPTS TO HANDLE VIRTUE - MUST COME AFTER REPUTATIONINC() ACTIONS ARE PROCESSED
+ACTION_IF NOT FILE_EXISTS ~override/FW2600.are~ // REGULAR BG2
+THEN BEGIN
+    ACTION_IF NOT FILE_EXISTS ~override/KishOH.BCS~
+    THEN BEGIN
+    EXTEND_TOP ~BALDUR.BCS~ ~virtue/bg2/et_baldr.BAF~
+    EXTEND_TOP ~BALDUR25.BCS~ ~virtue/bg2/et_baldr.BAF~
+    END
+    ELSE BEGIN
+    EXTEND_TOP ~BALDUR.BCS~ ~virtue/bg2/et_baldr_oversight.BAF~
+    EXTEND_TOP ~BALDUR25.BCS~ ~virtue/bg2/et_baldr_oversight.BAF~
+    END
+END
+ACTION_IF FILE_EXISTS ~override/FW2600.are~ // BG1TUTU
+	  AND FILE_EXISTS ~override/FW1500.are~
+THEN BEGIN
+    ACTION_IF NOT FILE_EXISTS ~override/KishOH.BCS~
+    THEN BEGIN
+    EXTEND_TOP ~BALDUR.BCS~ ~virtue/tutu/et_baldr.BAF~
+    EXTEND_TOP ~BALDUR25.BCS~ ~virtue/tutu/et_baldr.BAF~
+    END
+    ELSE BEGIN
+    EXTEND_TOP ~BALDUR.BCS~ ~virtue/tutu/et_baldr_oversight.BAF~
+    EXTEND_TOP ~BALDUR25.BCS~ ~virtue/tutu/et_baldr_oversight.BAF~
+    END
+END
+
+// NOTE: NEED TO MODIFY TUTU VERSION OF ET_BALDR TO ACCOUNT FOR ALL NPCS. REMEMBER TO INCLUDE MOD NPCS.

@@ -1,0 +1,480 @@
+IF
+	See([ENEMY.0.0.FLAMING_FIST])
+	Class(Myself,FLAMING_FIST)
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+// VIRTUE CHANGES
+
+IF
+	HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("Hit","LOCALS",0)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(99)
+		SetGlobal("Hit","LOCALS",1)
+		IncrementGlobal("D0Change","GLOBAL",-1)
+		Continue()
+END
+
+IF
+	HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("Hit","LOCALS",0)
+	GlobalGT("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		Shout(99)
+		SetGlobal("Hit","LOCALS",1)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	GlobalGT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-10)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-9)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-8)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-7)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-6)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	GlobalGT("D0VIRTUE","GLOBAL",11)
+	GlobalLT("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-5)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	GlobalGT("D0VIRTUE","GLOBAL",9)
+	GlobalLT("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-4)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	Global("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-3)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	OR(2)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+	GlobalGT("D0VIRTUE","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-1)
+		Continue()
+END
+
+// REPUTATION CHANGES
+
+IF
+	OR(2)
+		Heard([ANYONE],899)
+		Heard([ANYONE],151)
+	See(LastHeardBy(Myself))
+	Class(LastHeardBy(Myself),FLAMING_FIST)
+	ReputationGT(Player1,10)
+	!GlobalTimerNotExpired("D0RepChange","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("D0RepChange","GLOBAL",3)
+		ReputationInc(-2)
+		Continue()
+END
+
+IF
+	OR(2)
+		Heard([ANYONE],899)
+		Heard([ANYONE],151)
+	See(LastHeardBy(Myself))
+	Class(LastHeardBy(Myself),FLAMING_FIST)
+	ReputationLT(Player1,11)
+	!GlobalTimerNotExpired("D0RepChange","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("D0RepChange","GLOBAL",3)
+		ReputationInc(-1)
+		Continue()
+END
+
+IF
+	OR(2)
+		Heard([ANYONE],899)
+		Heard([ANYONE],151)
+	See(LastHeardBy(Myself))
+	Class(LastHeardBy(Myself),INNOCENT)
+	!GlobalTimerNotExpired("D0RepChange","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("D0RepChange","GLOBAL",3)
+		ReputationInc(-1)
+		Continue()
+END
+
+IF
+	Heard([ANYONE],99)
+	See(LastHeardBy(Myself))
+	OR(2)
+		Class(LastHeardBy(Myself),INNOCENT)
+		Class(LastHeardBy(Myself),FLAMING_FIST)
+	!GlobalTimerNotExpired("D0RepChange","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("D0RepChange","GLOBAL",3)
+		ReputationInc(-1)
+		Continue()
+END
+
+// SHOUTS
+
+IF
+	Die()
+THEN
+	RESPONSE #100
+		Shout(151)
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	OR(2)
+		Allegiance(Myself,GOODBUTBLUE)
+		Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Shout(151)
+		Enemy()
+END
+
+IF
+	OR(4)
+		Heard([ANYONE],899)
+		Heard([ANYONE],99)
+		Heard([ANYONE],57)
+		Heard([ANYONE],151)
+	InMyGroup(LastHeardBy(Myself))
+	OR(2)
+		Allegiance(Myself,GOODBUTBLUE)
+		Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	HitBy([GOODCUTOFF],CRUSHING)
+	OR(4)
+		Allegiance(Myself,GOODBUTBLUE)
+		Allegiance(Myself,NEUTRAL)
+		Class(Myself,INNOCENT)
+		Class(Myself,FLAMING_FIST)
+THEN
+	RESPONSE #100
+		Shout(99)
+		Continue()
+END
+
+IF
+	See([GOODCUTOFF])
+	Allegiance(Myself,ENEMY)
+	ActionListEmpty()
+THEN
+	RESPONSE #100
+		Shout(151)
+		Continue()
+END
+
+IF
+	Heard([ANYONE],151)
+	InMyGroup(LastHeardBy(Myself))
+	!Class(Myself,INNOCENT)
+	OR(2)
+		Allegiance(Myself,GOODBUTBLUE)
+		Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+		MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+	Heard([ANYONE],151)
+	InMyGroup(LastHeardBy(Myself))
+	OR(2)
+		Allegiance(Myself,GOODBUTBLUE)
+		Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
+IF
+	Heard([ANYONE],151)
+	InMyGroup(LastHeardBy(Myself))
+	!Class(Myself,INNOCENT)
+	!See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		MoveToObject(LastHeardBy(Myself))
+		Continue()
+END
+
+IF
+	General(Myself,HUMANOID)
+	HPPercentLT(Myself,20)
+	HPGT(Myself,1)
+	!StateCheck(Myself,STATE_REALLY_DEAD)
+	Global("Whined","LOCALS",0)
+	See(NearestMyGroupOfType)
+	Allegiance(Myself,ENEMY)
+	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+THEN
+	RESPONSE #50
+		SetGlobal("Whined","LOCALS",1)
+		DisplayStringHead(Myself,46151) // help!
+		Shout(153)
+	RESPONSE #50
+		SetGlobal("Whined","LOCALS",1)
+		DisplayStringHead(Myself,49763) // I require assistance
+		Shout(153)
+	RESPONSE #50
+		SetGlobal("Whined","LOCALS",1)
+		DisplayStringHead(Myself,49764) // Defend me!
+		Shout(153)
+	RESPONSE #50
+		SetGlobal("Whined","LOCALS",1)
+		DisplayStringHead(Myself,49765) // Slay my attacker!
+		Shout(153)
+END
+
+IF
+	Heard([ANYONE],153)
+	InMyGroup(LastHeardBy(Myself))
+	!HaveAnySpells()
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(LastAttackerOf(LastHeardBy(Myself)),30)
+END
+
+IF
+	General(Myself,HUMANOID)
+	BreakingPoint()
+	Global("Panic","LOCALS",0)
+	!StateCheck(Myself,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #50
+		SetGlobal("Panic","LOCALS",1)
+		DisplayStringHead(Myself,49766) // I can't take this
+	RESPONSE #50
+		SetGlobal("Panic","LOCALS",1)
+		DisplayStringHead(Myself,49767) // No more
+	RESPONSE #50
+		SetGlobal("Panic","LOCALS",1)
+		DisplayStringHead(Myself,49768) // Mercy!
+END
+
+IF
+	HitBy(Myself,CRUSHING)
+THEN
+	RESPONSE #100
+		RunAwayFrom(NearestEnemyOf(Myself),15)
+END

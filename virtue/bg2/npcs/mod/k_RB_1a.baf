@@ -1,0 +1,21 @@
+IF
+	InParty(Myself)
+	!StateCheck(Player1,STATE_SLEEPING)
+	ReputationLT(Player1,5)
+	Global("J#KelseyBadRepTalk2","LOCALS",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	!StateCheck(Player1,STATE_SLEEPING)
+	ReputationLT(Player1,8)
+	Global("J#KelseyBadRepTalk","LOCALS",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+

@@ -1,0 +1,21 @@
+IF
+	OR(2)
+		Global("PalaCured","GLOBAL",1)
+		Global("Pala","GLOBAL",0)
+	OR(2)
+		Allegiance("Barl",ENEMY)
+		Allegiance("temsup",ENEMY)
+	Global("WaukeenAttacked","AR2008",0)
+THEN
+	RESPONSE #100
+		SetGlobal("WaukeenAttacked","AR2008",1)
+		ActionOverride("Barl",Enemy())
+		ActionOverride("temsup",Enemy())
+		ReputationInc(-1)
+		CreateCreatureOffScreen("WAUKNI01",0) // Waukeenar Knight
+		CreateCreatureOffScreen("WAUKNI01",0) // Waukeenar Knight
+		CreateCreatureOffScreen("WAUKNI01",0) // Waukeenar Knight
+		CreateCreatureOffScreen("WAUKNI01",0) // Waukeenar Knight
+END
+
+

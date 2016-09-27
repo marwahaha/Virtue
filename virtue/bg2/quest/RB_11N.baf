@@ -1,0 +1,30 @@
+IF
+	Global("FreeOrDeadSlave","AR2400",0)
+	OR(9)
+		Dead("Slave100")
+		Dead("Slave101")
+		Dead("Slave102")
+		Dead("Slave103")
+		Dead("Slave104")
+		Dead("Slave105")
+		Dead("Slave106")
+		Dead("Slave107")
+		Dead("udilsla2") // Slave Leader
+THEN
+	RESPONSE #100
+		DisplayStringHead(Player1,57641) // The death of one slave causes the entire city to shake, disrupting the machine, and destroying the rest of the slaves
+		Wait(1)
+		ActionOverride("Slave100",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave101",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave102",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave103",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave104",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave105",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave106",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("Slave107",ApplySpell(Myself,SLAVE_CHUNK))
+		ActionOverride("udilsla2",ApplySpell(Myself,SLAVE_CHUNK))
+		SetGlobal("FreeOrDeadSlave","AR2400",1)
+		IncrementGlobal("D0Change","GLOBAL",-4)
+		Wait(3)
+		ScreenShake([1.1],15)
+END

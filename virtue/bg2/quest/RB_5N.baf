@@ -1,0 +1,17 @@
+IF
+	GlobalTimerExpired("MazzyCommentsRep","GLOBAL")
+	InParty(Myself)
+	See(Player1)
+	!StateCheck(Player1,STATE_SLEEPING)
+	OR(2)
+		GlobalGT("D0Happiness","LOCALS",14)
+		GlobalLT("D0Happiness","LOCALS",8)
+	Global("MazzyJustJoined","LOCALS",1)
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		SetGlobal("MazzyJustJoined","LOCALS",2)
+		Interact(Player1)
+END
+
+

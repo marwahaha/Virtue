@@ -1,0 +1,11 @@
+IF
+	BreakingPoint()
+THEN
+	RESPONSE #100
+		Wait(1)
+		Dialogue(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("multig")
+END
+
+

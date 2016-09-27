@@ -1,0 +1,19 @@
+/* IF
+	Dead("madulf")
+	Global("OgronAttack","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("OgronAttack","GLOBAL",4)
+		IncrementGlobal("D0Change","GLOBAL",-1)
+END */
+
+IF
+	Dead("madulf")
+	// Global("OgronAttack","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("OgronAttack","GLOBAL",4)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+END
+
+

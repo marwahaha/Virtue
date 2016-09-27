@@ -1,0 +1,249 @@
+// VIRTUE CHANGES
+
+IF
+	HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("Hit","LOCALS",0)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(99)
+		SetGlobal("Hit","LOCALS",1)
+		IncrementGlobal("D0Change","GLOBAL",-1)
+		Continue()
+END
+
+IF
+	HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("Hit","LOCALS",0)
+	GlobalGT("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		Shout(99)
+		SetGlobal("Hit","LOCALS",1)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	GlobalGT("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-10)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("D0VIRTUE","GLOBAL",18)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-9)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("D0VIRTUE","GLOBAL",17)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-8)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("D0VIRTUE","GLOBAL",16)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-7)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-6)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	GlobalGT("D0VIRTUE","GLOBAL",11)
+	GlobalLT("D0VIRTUE","GLOBAL",15)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-5)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	GlobalGT("D0VIRTUE","GLOBAL",9)
+	GlobalLT("D0VIRTUE","GLOBAL",12)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-4)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	Global("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-3)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	GlobalGT("D0VIRTUE","GLOBAL",4)
+	GlobalLT("D0VIRTUE","GLOBAL",9)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+		Continue()
+END
+
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+	GlobalGT("D0VIRTUE","GLOBAL",1)
+	GlobalLT("D0VIRTUE","GLOBAL",5)
+THEN
+	RESPONSE #100
+		Shout(899)
+		IncrementGlobal("D0Change","GLOBAL",-1)
+		Continue()
+END
+
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Global("TempleShout0903","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("TempleShout0903","GLOBAL",1)
+END
+
+IF
+	Global("TempleShout0903","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+	ReputationGT(Player1,10)
+THEN
+	RESPONSE #100
+		ReputationInc(-2)
+		Enemy()
+END
+
+IF
+	Global("TempleShout0903","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+	!ReputationGT(Player1,10)
+THEN
+	RESPONSE #100
+		ReputationInc(-1)
+		Enemy()
+END
+

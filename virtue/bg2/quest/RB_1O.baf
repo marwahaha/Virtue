@@ -1,0 +1,19 @@
+IF
+	Dead("madulf")
+	Global("OgronAttack","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("OgronAttack","GLOBAL",4)
+		ReputationInc(-1)
+END
+
+IF
+	Dead("madulf")
+	Global("OgronAttack","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("OgronAttack","GLOBAL",4)
+		ReputationInc(-2)
+END
+
+

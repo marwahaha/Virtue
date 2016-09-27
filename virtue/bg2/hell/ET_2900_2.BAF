@@ -1,0 +1,107 @@
+IF
+	GlobalLT("Player1Fear","GLOBAL",2)
+	Global("TearEye1","GLOBAL",1)
+	Global("D0Eye1Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye1Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Global("Player1Fear","GLOBAL",2)
+	Global("TearEye1","GLOBAL",1)
+	Global("D0Eye1Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye1Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",-3)
+END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+IF
+	GlobalLT("Player1Selfish","GLOBAL",2)
+	Global("TearEye2","GLOBAL",1)
+	Global("D0Eye2Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye2Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Global("Player1Selfish","GLOBAL",2)
+	Global("TearEye2","GLOBAL",1)
+	Global("D0Eye2Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye2Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",-5)
+END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+IF
+	GlobalLT("Player1Greed","GLOBAL",2)
+	Global("TearEye3","GLOBAL",1)
+	Global("D0Eye3Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye3Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Global("Player1Greed","GLOBAL",2)
+	Global("TearEye3","GLOBAL",1)
+	Global("D0Eye3Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye3Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",-4)
+END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+IF
+	GlobalLT("Player1Pride","GLOBAL",2)
+	Global("TearEye4","GLOBAL",1)
+	Global("D0Eye4Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye4Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Global("Player1Pride","GLOBAL",2)
+	Global("TearEye4","GLOBAL",1)
+	Global("D0Eye4Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye4Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",-4)
+END
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+IF
+	GlobalLT("Player1Wrath","GLOBAL",2)
+	Global("TearEye5","GLOBAL",1)
+	Global("D0Eye5Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye5Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",1)
+END
+
+IF
+	Global("Player1Wrath","GLOBAL",2)
+	Global("TearEye5","GLOBAL",1)
+	Global("D0Eye5Virtue","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D0Eye5Virtue","GLOBAL",1)
+		IncrementGlobal("D0Change","GLOBAL",-3)
+END

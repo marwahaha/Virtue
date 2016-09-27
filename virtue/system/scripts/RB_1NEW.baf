@@ -1,0 +1,46 @@
+IF
+	Alignment(Myself,MASK_GOOD)
+	!Name("imoen",Myself)
+	GlobalLT("D0Happiness","LOCALS",3)
+	OR(2)
+		GlobalLT("D0Happiness","LOCALS",2)
+		CheckStatLT(Player1,19,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("IHATEYOUALL","LOCALS",1)
+		SetLeavePartyDialogFile()
+		Wait(1)
+		StartDialogueNoSet(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetGlobal("IHATEYOUALL","LOCALS",0)
+END
+
+IF
+	Alignment(Myself,MASK_GENEUTRAL)
+	GlobalLT("D0Happiness","LOCALS",2)
+	!CheckStatGT(Player1,18,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("IHATEYOUALL","LOCALS",1)
+		SetLeavePartyDialogFile()
+		Wait(1)
+		StartDialogueNoSet(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetGlobal("IHATEYOUALL","LOCALS",0)
+END
+
+IF
+	Alignment(Myself,MASK_EVIL)
+	GlobalGT("D0Happiness","LOCALS",18)
+	OR(2)
+		GlobalGT("D0Happiness","LOCALS",19)
+		CheckStatLT(Player1,19,CHR)
+THEN
+	RESPONSE #100
+		SetGlobal("IHATEYOUALL","LOCALS",1)
+		SetLeavePartyDialogFile()
+		Wait(1)
+		StartDialogueNoSet(Player1)
+		ChangeAIScript("",DEFAULT)
+		SetGlobal("IHATEYOUALL","LOCALS",0)
+END

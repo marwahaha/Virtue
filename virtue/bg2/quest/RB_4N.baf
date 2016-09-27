@@ -1,0 +1,17 @@
+IF
+	InParty(Myself)
+	GlobalTimerExpired("KeldornMetPlayer","GLOBAL")
+	OR(2)
+		GlobalGT("D0VIRTUE","GLOBAL",14)
+		GlobalLT("D0Happiness","LOCALS",9)
+	See(Player1)
+	!StateCheck(Player1,STATE_SLEEPING)
+	CombatCounter(0)
+	Global("KeldornJudgement","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("KeldornJudgement","LOCALS",1)
+		Interact(Player1)
+END
+
+

@@ -1,0 +1,27 @@
+IF
+	Die()
+	OR(2)
+                AttackedBy([GOODCUTOFF],DEFAULT)
+                HitBy([GOODCUTOFF],CRUSHING)
+	!StateCheck(LastTrigger,STATE_CHARMED)
+	!StateCheck(LastTrigger,STATE_CONFUSED)
+	OR(2)
+		!HasItemEquipedReal("SW2H03",LastTrigger)
+		!StateCheck(LastTrigger,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		SetGlobal("D0HostileDryads","AR0602",1)
+		IncrementGlobal("D0Change","GLOBAL",-2)
+END
+
+IF
+	OR(3)
+		AttackedBy([GOODCUTOFF],DEFAULT)
+		HitBy([GOODCUTOFF],CRUSHING)
+		Global("D0HostileDryads","AR0602",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SetGlobal("D0HostileDryads","AR0602",1)
+		Enemy()
+END
