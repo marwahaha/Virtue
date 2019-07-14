@@ -139,7 +139,7 @@ Section V: Version History
 
 5 - Spanish translation by Bhasbuto (Clan DLAN)
 
-6 - French translation by Raphaël Mizrahi 
+6 - French translation by RaphaÃ«l Mizrahi 
 
 7 - Fixed infinite looping when Rangers fall.
   - Removed Imoen rescue timer completely.
@@ -189,7 +189,7 @@ Section V: Version History
    - Added Polish translation (Damian Staniszewski).
 
 15 - No more nasty BCS code in the TP2. Thanks Weimer!
-   - Added Czech translation by Zbynìk Veir. Readme has also been translated. See readme_czech.txt.
+   - Added Czech translation by ZbynÃ¬k Veir. Readme has also been translated. See readme_czech.txt.
    - Irenicus Dryads won't turn hostile if you fight monsters nearby. And they really do cause a Virtue drop this time.
    - Oversight compatibility no longer broken.
    - Readme is now in Polish. See readme_polish.txt.
@@ -214,7 +214,7 @@ Section V: Version History
 
 18 - Added Chinese translation by killmercy.
    - Updated Spanish translation.
-   - NPC (un)happiness sounds no longer interrupt abilties such as Stealth and Turn Undead.
+   - NPC (un)happiness sounds no longer interrupt abilities such as Stealth and Turn Undead.
    - Kish expresses contempt for all things Ding0. The Virtue mod lives on regardless.
    - Alignment change borderlines shifted again to better balance good/evil.
    - Imoen won't leave the party in Irenicus' dungeon.
